@@ -1,5 +1,6 @@
 package controllers;
 
+import Exeptions.WrongNightsQuantity;
 import models.Client;
 import utils.Rounder;
 import views.ClientView;
@@ -14,7 +15,7 @@ public class ClientController {
         this.view = view;
     }
 
-    public void runApp() {
+    public void runApp() throws WrongNightsQuantity {
 
         view.getInputs();
 

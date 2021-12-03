@@ -1,11 +1,12 @@
 package views;
 
+import Exeptions.WrongNightsQuantity;
 import models.Client;
 import utils.Validator;
 
 import java.util.Scanner;
 
-public class ClientView {
+public class ClientView  {
     Client model;
     String title;
     String name;
@@ -21,7 +22,7 @@ public class ClientView {
     }
 
     // Ввод данных
-    public void getInputs() {
+    public void getInputs()  {
 
         // Создаем экземпляр Scanner
         scanner = new Scanner(System.in);
@@ -48,8 +49,6 @@ public class ClientView {
         System.out.print(title);
         guestsChild = Validator.validateQuantityInput(scanner);
         model.setGuestsChildQuantity(guestsChild);
-
-
 
         title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);

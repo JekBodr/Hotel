@@ -1,5 +1,6 @@
 package models;
 
+import Exeptions.WrongNightsQuantity;
 import base.HotelName;
 import base.StarsChose;
 import base.TotalPrice;
@@ -70,8 +71,12 @@ public class Client implements StarsChose, TotalPrice, HotelName {
     }
 
     @Override
-    public double calculateStarsPrice(double starsChose, int clientsNumberAdult, int clientsNumberChild, int nightsNumber) {
-        return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * nightsNumber;
+    public double calculateStarsPrice(double starsChose, int clientsNumberAdult, int clientsNumberChild, int nightsNumber) throws WrongNightsQuantity {
+        if (nightsNumber <= 10)
+            return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * nightsNumber;
+        throw new WrongNightsQuantity("Максимальное количество ночей 10");
+
+
     }
 
     @Override
