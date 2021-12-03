@@ -8,7 +8,7 @@ public class ClientController {
     Client model;
     ClientView view;
 
-    // Конструктор
+  //   Конструктор
     public ClientController(Client model, ClientView view) {
         this.model = model;
         this.view = view;
@@ -31,7 +31,7 @@ public class ClientController {
 
        String output = "------------------------------\n" +
                 "Имя клиента: " + name + "\n" +
-                "Сума покупки (грн.): " + paymentInitialRounded + "\n";
+                "Сума к оплате (грн.): " + paymentInitialRounded + "\n";
 //                "Сумма скидки (грн.): " + discountRounded + "\n" +
 //                "К оплате (грн.): " + paymentRounded;
 

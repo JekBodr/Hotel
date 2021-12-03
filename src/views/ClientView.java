@@ -26,12 +26,12 @@ public class ClientView {
 
         // Ввод и валидация данных
 
-//        title = "Введите имя клиента: ";
-//        System.out.print(title);
-//        name = Validator.validateName(scanner);
-//        model.setName(name);
+        title = "Введите имя клиента: ";
+        System.out.print(title);
+        name = Validator.validateName(scanner);
+        model.setName(name);
 
-        title = "Введите количество звезд: ";
+        title = "Введите количество звезд (от 3х до 5ти): ";
         System.out.print(title);
         quantity = Validator.validateQuantityInput(scanner);
         model.setStarsQuantity(quantity);

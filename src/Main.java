@@ -4,9 +4,6 @@ import views.ClientView;
 
 public class Main {
     public static void main(String[] args) {
-
-            System.out.println("Модификация проекта, добавлен рассчет налога");
-
             Client model = new Client();
             ClientView view = new ClientView(model);
             ClientController controller = new ClientController(model, view);
