@@ -13,6 +13,7 @@ public class ClientView {
     int nights;
     int guestsAdult;
     int guestsChild;
+    int guestAnimal;
     Scanner scanner;
 
     // Конструктор
@@ -48,6 +49,11 @@ public class ClientView {
         System.out.print(title);
         guestsChild = Validator.validateQuantityInput(scanner);
         model.setGuestsChildQuantity(guestsChild);
+
+        title = "Введите количество животных: ";
+        System.out.print(title);
+        guestAnimal = Validator.validateQuantityInput(scanner);
+        model.setGuestsAnimalQuantity(guestAnimal);
 
 
 
