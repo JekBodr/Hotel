@@ -9,8 +9,9 @@ public class ClientView {
     Client model;
     String title;
     String name;
-    int quantity;
-    double price;
+    int stars;
+    int nights;
+    int guests;
     Scanner scanner;
 
     // Конструктор
@@ -31,10 +32,23 @@ public class ClientView {
         name = Validator.validateName(scanner);
         model.setName(name);
 
+        title = "Введите количество  ночей: ";
+        System.out.print(title);
+        nights = Validator.validateQuantityInput(scanner);
+        model.setNightQuantity(nights);
+
+
+        title = "Введите количество  гостей: ";
+        System.out.print(title);
+        guests = Validator.validateQuantityInput(scanner);
+        model.setGuestsQuantity(guests);
+
         title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);
-        quantity = Validator.validateQuantityInput(scanner);
-        model.setStarsQuantity(quantity);
+        stars = Validator.validateQuantityInput(scanner);
+        model.setStarsQuantity(stars);
+
+
 
 //        title = "Введите цену: ";
 //        System.out.print(title);

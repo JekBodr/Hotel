@@ -1,11 +1,13 @@
 package models;
 
+import base.HotelName;
 import base.StarsChose;
+import base.TotalPrice;
 import utils.Validator;
 
 import java.util.Scanner;
 
-public class Client implements StarsChose {
+public class Client implements StarsChose, TotalPrice, HotelName {
     private String name;
     private int nightQuantity;
     private int guestsQuantity;
@@ -54,6 +56,22 @@ public class Client implements StarsChose {
        else if (stars == 5) sum = 1000;
        return sum;
 
+    }
+
+    @Override
+    public double calculateStarsPrice(double starsChose, int clientsNumber, int nightsNumber) {
+        return starsChose * clientsNumber * nightsNumber;
+    }
+
+    @Override
+    public String choseHotel(int stars) {
+        String name = null;
+        if (stars == 1) name = "Cheap Hostel";
+        else if (stars == 2) name = "Expensive Hostel ";
+        else if (stars == 3) name = "Motel";
+        else if (stars == 4) name = "Hotel";
+        else if (stars == 5) name = "Kharkov Palace";
+        return name;
     }
 }
 

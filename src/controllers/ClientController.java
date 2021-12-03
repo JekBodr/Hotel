@@ -20,8 +20,11 @@ public class ClientController {
 
         String name = model.getName();
 
-        double paymentInitial = model.calculateStarsPrice(model.getStarsQuantity());
-        String paymentInitialRounded = Rounder.roundValue(paymentInitial);
+        double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());
+        double totalPrice = model.calculateStarsPrice(starsPrice, model.getGuestsQuantity(),
+                model.getNightQuantity());
+        String paymentInitialRounded = Rounder.roundValue(totalPrice);
+        String hotelName = model.choseHotel(model.getStarsQuantity());
 //
 //        double discount = model.calculateDiscount(paymentInitial);
 //        String discountRounded = Rounder.roundValue(discount);
@@ -30,8 +33,9 @@ public class ClientController {
 //                .calculatePayment(paymentInitial, discount));
 
        String output = "------------------------------\n" +
-                "Имя клиента: " + name + "\n" +
-                "Сума к оплате (грн.): " + paymentInitialRounded + "\n";
+                "Название отеля: " + hotelName +
+                "\nКолличество ночей: " + model.getNightQuantity() +
+                "\nСума к оплате (грн.): " + paymentInitialRounded + "\n";
 //                "Сумма скидки (грн.): " + discountRounded + "\n" +
 //                "К оплате (грн.): " + paymentRounded;
 
