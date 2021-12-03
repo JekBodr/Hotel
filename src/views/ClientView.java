@@ -11,7 +11,8 @@ public class ClientView {
     String name;
     int stars;
     int nights;
-    int guests;
+    int guestsAdult;
+    int guestsChild;
     Scanner scanner;
 
     // Конструктор
@@ -38,22 +39,23 @@ public class ClientView {
         model.setNightQuantity(nights);
 
 
-        title = "Введите количество  гостей: ";
+        title = "Введите количество взрослых гостей: ";
         System.out.print(title);
-        guests = Validator.validateQuantityInput(scanner);
-        model.setGuestsQuantity(guests);
+        guestsAdult = Validator.validateQuantityInput(scanner);
+        model.setGuestsAdultQuantity(guestsAdult);
+
+        title = "Введите количество несовершеннолетних гостей: ";
+        System.out.print(title);
+        guestsChild = Validator.validateQuantityInput(scanner);
+        model.setGuestsChildQuantity(guestsChild);
+
+
 
         title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);
         stars = Validator.validateQuantityInput(scanner);
         model.setStarsQuantity(stars);
 
-
-
-//        title = "Введите цену: ";
-//        System.out.print(title);
-//        price = Validator.validatePriceInput(scanner);
-//        model.setPrice(price);
 
         // Закрываем Scanner
         scanner.close();

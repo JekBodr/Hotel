@@ -21,7 +21,8 @@ public class ClientController {
         String name = model.getName();
 
         double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());
-        double totalPrice = model.calculateStarsPrice(starsPrice, model.getGuestsQuantity(),
+        double totalPrice = model.calculateStarsPrice(starsPrice, model.getGuestsAdultQuantity(),
+                model.getGuestsChildQuantity(),
                 model.getNightQuantity());
         String paymentInitialRounded = Rounder.roundValue(totalPrice);
         String hotelName = model.choseHotel(model.getStarsQuantity());

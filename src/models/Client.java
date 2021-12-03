@@ -3,14 +3,12 @@ package models;
 import base.HotelName;
 import base.StarsChose;
 import base.TotalPrice;
-import utils.Validator;
-
-import java.util.Scanner;
 
 public class Client implements StarsChose, TotalPrice, HotelName {
     private String name;
     private int nightQuantity;
-    private int guestsQuantity;
+    private int guestsAdultQuantity;
+    private int guestsChildQuantity;
     private int starsQuantity;
 
     public String getName() {
@@ -29,12 +27,12 @@ public class Client implements StarsChose, TotalPrice, HotelName {
         this.nightQuantity = nightQuantity;
     }
 
-    public int getGuestsQuantity() {
-        return guestsQuantity;
+    public int getGuestsAdultQuantity() {
+        return guestsAdultQuantity;
     }
 
-    public void setGuestsQuantity(int guestsQuantity) {
-        this.guestsQuantity = guestsQuantity;
+    public void setGuestsAdultQuantity(int guestsAdultQuantity) {
+        this.guestsAdultQuantity = guestsAdultQuantity;
     }
 
     public int getStarsQuantity() {
@@ -43,6 +41,14 @@ public class Client implements StarsChose, TotalPrice, HotelName {
 
     public void setStarsQuantity(int starsQuantity) {
         this.starsQuantity = starsQuantity;
+    }
+
+    public int getGuestsChildQuantity() {
+        return guestsChildQuantity;
+    }
+
+    public void setGuestsChildQuantity(int guestsChildQuantity) {
+        this.guestsChildQuantity = guestsChildQuantity;
     }
 
     // Расчёт стоимости номера в зависимости от коллчества звезд отеля.
@@ -61,6 +67,11 @@ public class Client implements StarsChose, TotalPrice, HotelName {
     @Override
     public double calculateStarsPrice(double starsChose, int clientsNumber, int nightsNumber) {
         return starsChose * clientsNumber * nightsNumber;
+    }
+
+    @Override
+    public double calculateStarsPrice(double starsChose, int clientsNumberAdult, int clientsNumberChild, int nightsNumber) {
+        return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * nightsNumber;
     }
 
     @Override
