@@ -47,7 +47,9 @@ public class Client implements StarsChose {
     @Override
     public double calculateStarsPrice(int stars) {
        double sum = 0;
-       if (stars == 3) sum = 500;
+       if (stars == 1) sum = 250;
+       else if (stars == 2) sum = 350;
+       else if (stars == 3) sum = 500;
        else if (stars == 4) sum = 750;
        else if (stars == 5) sum = 1000;
        return sum;

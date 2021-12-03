@@ -31,7 +31,7 @@ public class ClientView {
         name = Validator.validateName(scanner);
         model.setName(name);
 
-        title = "Введите количество звезд (от 3х до 5ти): ";
+        title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);
         quantity = Validator.validateQuantityInput(scanner);
         model.setStarsQuantity(quantity);
