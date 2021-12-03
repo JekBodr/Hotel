@@ -10,6 +10,7 @@ public class Client implements StarsChose, TotalPrice, HotelName {
     private int nightQuantity;
     private int guestsAdultQuantity;
     private int guestsChildQuantity;
+    private int guestsAnimalQuantity;
     private int starsQuantity;
 
     public String getName() {
@@ -52,6 +53,14 @@ public class Client implements StarsChose, TotalPrice, HotelName {
         this.guestsChildQuantity = guestsChildQuantity;
     }
 
+    public int getGuestsAnimalQuantity() {
+        return guestsAnimalQuantity;
+    }
+
+    public void setGuestsAnimalQuantity(int guestsAnimalQuantity) {
+        this.guestsAnimalQuantity = guestsAnimalQuantity;
+    }
+
     // Расчёт стоимости номера в зависимости от коллчества звезд отеля.
     @Override
     public double calculateStarsPrice(int stars) {
@@ -79,6 +88,11 @@ public class Client implements StarsChose, TotalPrice, HotelName {
 
     }
 
+    @Override
+    public double calculateStarsPrice(double starsChose, int clientsNumberAdult,
+                                      int clientsNumberChild, int clientsNumberAnimal, int nightsNumber) {
+        return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * (clientsNumberAnimal *1.2) * nightsNumber;
+    }
     @Override
     public String choseHotel(int stars) {
         String name = null;
