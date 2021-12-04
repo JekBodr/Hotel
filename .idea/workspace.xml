@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Upd GuestApp">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/applications/GuestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/applications/GuestApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
-=======
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Rename Guest classes">
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/controllers/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/models/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/ClientView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/applications/ReservationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/applications/ReservationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
->>>>>>> feature-reservation
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/base/TotalPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/base/TotalPrice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applications/GuestApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applications/ReservationApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/TotalPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/TotalPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Guest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/GuestView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-<<<<<<< HEAD
-        <entry key="$PROJECT_DIR$" value="feature-reservation" />
-=======
-        <entry key="$PROJECT_DIR$" value="master" />
->>>>>>> feature-reservation
+        <entry key="$PROJECT_DIR$" value="feature-exceptions" />
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="21kYFvLRfdQaKisxhZl4ennA6VF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,11 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
   <component name="RunManager" selected="Application.GuestApp">
-=======
-  <component name="RunManager" selected="Application.ReservationApp">
->>>>>>> feature-reservation
     <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
       <module name="Hotel" />
@@ -71,8 +59,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="applcations.GuestApp" />
       <module name="Hotel" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,19 +81,11 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
         <item itemvalue="Application.GuestApp" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.GuestApp" />
-        <item itemvalue="Application.GuestApp" />
-=======
         <item itemvalue="Application.ReservationApp" />
-        <item itemvalue="Application.GuestApp" />
-        <item itemvalue="Application.GuestApp" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
->>>>>>> feature-reservation
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +161,6 @@
       <option name="project" value="LOCAL" />
       <updated>1638649796889</updated>
     </task>
-<<<<<<< HEAD
     <task id="LOCAL-00010" summary="Upd Reservation">
       <created>1638650688312</created>
       <option name="number" value="00010" />
@@ -196,10 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638650708078</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
-=======
-    <option name="localTasksCounter" value="10" />
->>>>>>> feature-reservation
+    <task id="LOCAL-00012" summary="Upd GuestApp">
+      <created>1638650891937</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1638650891937</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,12 +219,8 @@
     <MESSAGE value="Add Animal exception" />
     <MESSAGE value="Create reservation branch" />
     <MESSAGE value="Rename Guest classes" />
-<<<<<<< HEAD
     <MESSAGE value="Upd Reservation" />
     <MESSAGE value="Upd GuestApp" />
     <option name="LAST_COMMIT_MESSAGE" value="Upd GuestApp" />
-=======
-    <option name="LAST_COMMIT_MESSAGE" value="Rename Guest classes" />
->>>>>>> feature-reservation
   </component>
 </project>
