@@ -4,7 +4,7 @@ import base.HotelName;
 import base.StarsChose;
 import base.TotalPrice;
 
-public class Client implements StarsChose, TotalPrice, HotelName {
+public class Guest implements StarsChose, TotalPrice, HotelName {
     private String name;
     private int nightQuantity;
     private int guestsAdultQuantity;
