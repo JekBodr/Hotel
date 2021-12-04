@@ -1,4 +1,4 @@
-package Exeptions;
+package exceptions;
 
 public class WrongNightsQuantity extends Exception {
 
@@ -8,10 +8,6 @@ public class WrongNightsQuantity extends Exception {
             checkData = "Максимальное количество ночей 10";
         }
 
-        public WrongNightsQuantity(String message) {
-            super(message);
-            checkData = message;
-        }
         @Override
         public String toString() {
             return  checkData;

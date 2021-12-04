@@ -1,6 +1,6 @@
 package views;
 
-
+import exceptions.WrongNightsQuantity;
 import models.Guest;
 import utils.Validator;
 
@@ -23,7 +23,7 @@ public class GuestView {
     }
 
     // Ввод данных
-    public void getInputs() {
+    public void getInputs() throws WrongNightsQuantity {
 
         // Создаем экземпляр Scanner
         scanner = new Scanner(System.in);
@@ -38,7 +38,12 @@ public class GuestView {
         title = "Введите количество  ночей: ";
         System.out.print(title);
         nights = Validator.validateQuantityInput(scanner);
-        model.setNightQuantity(nights);
+        if (nights < 10) model.setNightQuantity(nights);
+        else {
+            System.out.println("Не больше 10 ночей!!!!!");
+            throw new WrongNightsQuantity();
+        }
+
 
 
         title = "Введите количество взрослых гостей: ";
