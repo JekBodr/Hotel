@@ -1,5 +1,6 @@
 package controllers;
 
+import Exeptions.WrongNightsQuantity;
 import models.Guest;
 import utils.Rounder;
 import views.GuestView;

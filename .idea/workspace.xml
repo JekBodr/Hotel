@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Create reservation branch" />
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Upd GuestApp">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applications/GuestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/applications/GuestApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="develop" />
+    <option name="BRANCH" value="feature-reservation" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -39,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.GuestApp">
     <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
       <module name="Hotel" />
@@ -54,13 +60,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReservationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="applications.ReservationApp" />
+      <module name="Hotel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="applications.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.GuestApp" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ReservationApp" />
+        <item itemvalue="Application.GuestApp" />
+        <item itemvalue="Application.GuestApp" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +148,28 @@
       <option name="project" value="LOCAL" />
       <updated>1638649729521</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Rename Guest classes">
+      <created>1638649796889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1638649796889</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Upd Reservation">
+      <created>1638650688312</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638650688312</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Upd Reservation">
+      <created>1638650708078</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638650708078</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,7 +183,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature-exceptions" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -165,6 +205,9 @@
     <MESSAGE value="Add nights exception" />
     <MESSAGE value="Add Animal exception" />
     <MESSAGE value="Create reservation branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create reservation branch" />
+    <MESSAGE value="Rename Guest classes" />
+    <MESSAGE value="Upd Reservation" />
+    <MESSAGE value="Upd GuestApp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upd GuestApp" />
   </component>
 </project>
