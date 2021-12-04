@@ -1,0 +1,35 @@
+Index: src/base/TotalPrice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package base;\r\n\r\nimport Exeptions.WrongNightsQuantity;\r\n\r\npublic interface TotalPrice {\r\n    double calculateStarsPrice(double starsChose, int clientsNumber, int nightsNumber);\r\n\r\n    double calculateStarsPrice(double starsChose, int clientsNumberAdult,int clientsNumberChild, int nightsNumber) throws WrongNightsQuantity;\r\n\r\n    double calculateStarsPrice(double starsChose, int clientsNumberAdult,int clientsNumberChild,\r\n                               int clientsNumberAnimal, int nightsNumber);\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/TotalPrice.java b/src/base/TotalPrice.java
+--- a/src/base/TotalPrice.java	
++++ b/src/base/TotalPrice.java	
+@@ -1,5 +1,7 @@
+ package base;
+ 
++// Интерфейс выбора цены за номер относительно звезды отеля
++
+ import Exeptions.WrongNightsQuantity;
+ 
+ public interface TotalPrice {
+Index: src/base/HotelName.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package base;\r\n\r\npublic interface HotelName {\r\n    String choseHotel (int stars);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/HotelName.java b/src/base/HotelName.java
+--- a/src/base/HotelName.java	
++++ b/src/base/HotelName.java	
+@@ -1,5 +1,6 @@
+ package base;
+ 
++// Интерфейс выбора цены за номер относительно звезды отеля
+ public interface HotelName {
+     String choseHotel (int stars);
+ }
