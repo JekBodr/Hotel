@@ -1,16 +1,15 @@
 package controllers;
 
-import Exeptions.WrongNightsQuantity;
-import models.Client;
+import models.Guest;
 import utils.Rounder;
-import views.ClientView;
+import views.GuestView;
 
-public class ClientController {
-    Client model;
-    ClientView view;
+public class GuestController {
+    Guest model;
+    GuestView view;
 
   //   Конструктор
-    public ClientController(Client model, ClientView view) {
+    public GuestController(Guest model, GuestView view) {
         this.model = model;
         this.view = view;
     }

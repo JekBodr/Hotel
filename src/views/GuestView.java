@@ -1,13 +1,12 @@
 package views;
 
-import Exeptions.WrongNightsQuantity;
-import models.Client;
+import models.Guest;
 import utils.Validator;
 
 import java.util.Scanner;
 
-public class ClientView  {
-    Client model;
+public class GuestView {
+    Guest model;
     String title;
     String name;
     int stars;
@@ -18,7 +17,7 @@ public class ClientView  {
     Scanner scanner;
 
     // Конструктор
-    public ClientView(Client model) {
+    public GuestView(Guest model) {
         this.model = model;
     }
 
