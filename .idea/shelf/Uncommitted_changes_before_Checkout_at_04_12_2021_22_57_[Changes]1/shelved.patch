@@ -1,0 +1,477 @@
+Index: src/models/Guest.java
+===================================================================
+diff --git a/src/models/Guest.java b/src/models/Guest.java
+deleted file mode 100644
+--- a/src/models/Guest.java	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ /dev/null	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
+@@ -1,102 +0,0 @@
+-package models;
+-
+-import base.HotelName;
+-import base.StarsChose;
+-import base.TotalPrice;
+-
+-public class Guest implements StarsChose, TotalPrice, HotelName {
+-    private String name;
+-    private int nightQuantity;
+-    private int guestsAdultQuantity;
+-    private int guestsChildQuantity;
+-    private int guestsAnimalQuantity;
+-    private int starsQuantity;
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public int getNightQuantity() {
+-        return nightQuantity;
+-    }
+-
+-    public void setNightQuantity(int nightQuantity) {
+-        this.nightQuantity = nightQuantity;
+-    }
+-
+-    public int getGuestsAdultQuantity() {
+-        return guestsAdultQuantity;
+-    }
+-
+-    public void setGuestsAdultQuantity(int guestsAdultQuantity) {
+-        this.guestsAdultQuantity = guestsAdultQuantity;
+-    }
+-
+-    public int getStarsQuantity() {
+-        return starsQuantity;
+-    }
+-
+-    public void setStarsQuantity(int starsQuantity) {
+-        this.starsQuantity = starsQuantity;
+-    }
+-
+-    public int getGuestsChildQuantity() {
+-        return guestsChildQuantity;
+-    }
+-
+-    public void setGuestsChildQuantity(int guestsChildQuantity) {
+-        this.guestsChildQuantity = guestsChildQuantity;
+-    }
+-
+-    public int getGuestsAnimalQuantity() {
+-        return guestsAnimalQuantity;
+-    }
+-
+-    public void setGuestsAnimalQuantity(int guestsAnimalQuantity) {
+-        this.guestsAnimalQuantity = guestsAnimalQuantity;
+-    }
+-
+-    // Расчёт стоимости номера в зависимости от коллчества звезд отеля.
+-    @Override
+-    public double calculateStarsPrice(int stars) {
+-       double sum = 0;
+-       if (stars == 1) sum = 250;
+-       else if (stars == 2) sum = 350;
+-       else if (stars == 3) sum = 500;
+-       else if (stars == 4) sum = 750;
+-       else if (stars == 5) sum = 1000;
+-       return sum;
+-
+-    }
+-
+-    @Override
+-    public double calculateStarsPrice(double starsChose, int clientsNumber, int nightsNumber) {
+-        return starsChose * clientsNumber * nightsNumber;
+-    }
+-
+-    @Override
+-    public double calculateStarsPrice(double starsChose, int clientsNumberAdult, int clientsNumberChild, int nightsNumber) {
+-        return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * nightsNumber;
+-    }
+-
+-    @Override
+-    public double calculateStarsPrice(double starsChose, int clientsNumberAdult,
+-                                      int clientsNumberChild, int clientsNumberAnimal, int nightsNumber) {
+-        return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * (clientsNumberAnimal *1.2) * nightsNumber;
+-    }
+-    @Override
+-    public String choseHotel(int stars) {
+-        String name = null;
+-        if (stars == 1) name = "Cheap Hostel";
+-        else if (stars == 2) name = "Expensive Hostel ";
+-        else if (stars == 3) name = "Motel";
+-        else if (stars == 4) name = "Hotel";
+-        else if (stars == 5) name = "Kharkov Palace";
+-        return name;
+-    }
+-}
+-
+Index: src/applications/ReservationApp.java
+===================================================================
+diff --git a/src/applications/ReservationApp.java b/src/applications/ReservationApp.java
+deleted file mode 100644
+--- a/src/applications/ReservationApp.java	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ /dev/null	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
+@@ -1,39 +0,0 @@
+-package applications;
+-
+-import java.text.ParseException;
+-import java.text.SimpleDateFormat;
+-import java.util.Date;
+-import java.util.Scanner;
+-import models.Reservation;
+-
+-public class ReservationApp {
+-
+-    public static void main(String[] args) throws ParseException {
+-        Scanner sc = new Scanner(System.in);
+-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+-
+-
+-        System.out.print("Номер комнаты: ");
+-        int roomNumber = sc.nextInt();
+-        System.out.print("Дата заезда (dd/MM/yyyy): ");
+-        Date checkIn = sdf.parse(sc.next());
+-        System.out.print("Дата выезда (dd/MM/yyyy): ");
+-        Date checkOut = sdf.parse(sc.next());
+-
+-        Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+-        System.out.println("Бронирование: " + reservation);
+-
+-        System.out.println("\nВведите данные для обновления бронирования:");
+-        System.out.print("Дата заезда (dd/MM/yyyy): ");
+-        checkIn = sdf.parse(sc.next());
+-        System.out.print("Дата выезда (dd/MM/yyyy): ");
+-        checkOut = sdf.parse(sc.next());
+-
+-        reservation.updateDates(checkIn, checkOut);
+-        System.out.println("Бронирование: " + reservation);
+-
+-        sc.close();
+-
+-    }
+-
+-}
+Index: src/applications/GuestApp.java
+===================================================================
+diff --git a/src/applications/GuestApp.java b/src/applications/GuestApp.java
+deleted file mode 100644
+--- a/src/applications/GuestApp.java	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ /dev/null	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
+@@ -1,15 +0,0 @@
+-package applications;
+-
+-import controllers.GuestController;
+-import models.Guest;
+-import views.GuestView;
+-
+-public class GuestApp {
+-    public static void main(String[] args) {
+-            Guest model = new Guest();
+-            GuestView view = new GuestView(model);
+-            GuestController controller = new GuestController(model, view);
+-            // Запуск программы/приложения
+-            controller.runApp();
+-    }
+-}
+Index: src/models/Reservation.java
+===================================================================
+diff --git a/src/models/Reservation.java b/src/models/Reservation.java
+deleted file mode 100644
+--- a/src/models/Reservation.java	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ /dev/null	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
+@@ -1,49 +0,0 @@
+-package models;
+-
+-import java.text.SimpleDateFormat;
+-import java.util.Date;
+-import java.util.concurrent.TimeUnit;
+-import applications.ReservationApp;
+-
+-public class Reservation {
+-
+-        private Integer roomNumber;
+-        private Date checkIn;
+-        private Date checkOut;
+-
+-        private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+-
+-        public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+-
+-            this.roomNumber = roomNumber;
+-            this.checkIn = checkIn;
+-            this.checkOut = checkOut;
+-        }
+-
+-        public long duration() {
+-            long diff = checkOut.getTime() - checkIn.getTime();
+-            return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+-        }
+-
+-        public void updateDates(Date checkIn, Date checkOut) {
+-            Date now = new Date();
+-
+-            this.checkIn = checkIn;
+-            this.checkOut = checkOut;
+-        }
+-
+-        @Override
+-        public String toString() {
+-            return "Комната "
+-                    + roomNumber
+-                    + ", заезд: "
+-                    + sdf.format(checkIn)
+-                    + ", выезд: "
+-                    + sdf.format(checkOut)
+-                    + " , "
+-                    + duration()
+-                    + " ночей";
+-        }
+-
+-    }
+-
+Index: src/controllers/GuestController.java
+===================================================================
+diff --git a/src/controllers/GuestController.java b/src/controllers/GuestController.java
+deleted file mode 100644
+--- a/src/controllers/GuestController.java	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ /dev/null	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
+@@ -1,39 +0,0 @@
+-package controllers;
+-
+-import models.Guest;
+-import utils.Rounder;
+-import views.GuestView;
+-
+-public class GuestController {
+-    Guest model;
+-    GuestView view;
+-
+-  //   Конструктор
+-    public GuestController(Guest model, GuestView view) {
+-        this.model = model;
+-        this.view = view;
+-    }
+-
+-    public void runApp() {
+-
+-        view.getInputs();
+-
+-        String name = model.getName();
+-
+-        double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());
+-        double totalPrice = model.calculateStarsPrice(starsPrice, model.getGuestsAdultQuantity(),
+-                model.getGuestsChildQuantity(),
+-                model.getGuestsAnimalQuantity(),
+-                model.getNightQuantity());
+-        String paymentInitialRounded = Rounder.roundValue(totalPrice);
+-        String hotelName = model.choseHotel(model.getStarsQuantity());
+-
+-
+-       String output = "------------------------------\n" +
+-                "Название отеля: " + hotelName +
+-                "\nКолличество ночей: " + model.getNightQuantity() +
+-                "\nСума к оплате (грн.): " + paymentInitialRounded + "\n";
+-
+-        view.getOutput(output);
+-    }
+-}
+Index: src/views/GuestView.java
+===================================================================
+diff --git a/src/views/GuestView.java b/src/views/GuestView.java
+deleted file mode 100644
+--- a/src/views/GuestView.java	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ /dev/null	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
+@@ -1,74 +0,0 @@
+-package views;
+-
+-import models.Guest;
+-import utils.Validator;
+-
+-import java.util.Scanner;
+-
+-public class GuestView {
+-    Guest model;
+-    String title;
+-    String name;
+-    int stars;
+-    int nights;
+-    int guestsAdult;
+-    int guestsChild;
+-    int guestAnimal;
+-    Scanner scanner;
+-
+-    // Конструктор
+-    public GuestView(Guest model) {
+-        this.model = model;
+-    }
+-
+-    // Ввод данных
+-    public void getInputs() {
+-
+-        // Создаем экземпляр Scanner
+-        scanner = new Scanner(System.in);
+-
+-        // Ввод и валидация данных
+-
+-        title = "Введите имя клиента: ";
+-        System.out.print(title);
+-        name = Validator.validateName(scanner);
+-        model.setName(name);
+-
+-        title = "Введите количество  ночей: ";
+-        System.out.print(title);
+-        nights = Validator.validateQuantityInput(scanner);
+-        model.setNightQuantity(nights);
+-
+-
+-        title = "Введите количество взрослых гостей: ";
+-        System.out.print(title);
+-        guestsAdult = Validator.validateQuantityInput(scanner);
+-        model.setGuestsAdultQuantity(guestsAdult);
+-
+-        title = "Введите количество несовершеннолетних гостей: ";
+-        System.out.print(title);
+-        guestsChild = Validator.validateQuantityInput(scanner);
+-        model.setGuestsChildQuantity(guestsChild);
+-
+-        title = "Введите количество животных: ";
+-        System.out.print(title);
+-        guestAnimal = Validator.validateQuantityInput(scanner);
+-        model.setGuestsAnimalQuantity(guestAnimal);
+-
+-
+-
+-        title = "Введите количество звезд (от 1й до 5ти): ";
+-        System.out.print(title);
+-        stars = Validator.validateQuantityInput(scanner);
+-        model.setStarsQuantity(stars);
+-
+-
+-        // Закрываем Scanner
+-        scanner.close();
+-    }
+-
+-    // Вывод данных
+-    public void getOutput(String output) {
+-        System.out.println(output);
+-    }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e97f6a9e-1f57-40d6-a8d7-e11adf0178a3\" name=\"Changes\" comment=\"Rename Guest classes\">\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Hotel/Main.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Hotel/controllers/ClientController.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Hotel/models/Client.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Hotel/views/ClientView.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/applications/ReservationApp.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/applications/ReservationApp.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/models/Reservation.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/models/Reservation.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"feature-reservation\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n        <entry key=\"$PROJECT_DIR$\" value=\"develop\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"21kYFvLRfdQaKisxhZl4ennA6VF\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.ReservationApp\">\r\n    <configuration name=\"GuestApp\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"applications.GuestApp\" />\r\n      <module name=\"Hotel\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"Hotel\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ReservationApp\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"applications.ReservationApp\" />\r\n      <module name=\"Hotel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"applications.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.ReservationApp\" />\r\n        <item itemvalue=\"Application.GuestApp\" />\r\n        <item itemvalue=\"Application.GuestApp\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e97f6a9e-1f57-40d6-a8d7-e11adf0178a3\" name=\"Changes\" comment=\"\" />\r\n      <created>1638486452380</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1638486452380</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Start version: StarsChose\">\r\n      <created>1638489797774</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638489797774</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add Client`s name\">\r\n      <created>1638560075303</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638560075303</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"UPD starsCalculate\">\r\n      <created>1638560502816</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638560502816</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add chose hotel name\">\r\n      <created>1638562830072</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638562830072</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Add child calculation\">\r\n      <created>1638564593115</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638564593115</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Add nights exception\">\r\n      <created>1638567142828</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638567142828</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Add Animal exception\">\r\n      <created>1638569170052</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638569170052</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Create reservation branch\">\r\n      <created>1638649729521</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638649729521</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Rename Guest classes\">\r\n      <created>1638649796889</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1638649796889</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Start version: StarsChose\" />\r\n    <MESSAGE value=\"Add Client`s name\" />\r\n    <MESSAGE value=\"UPD starsCalculate\" />\r\n    <MESSAGE value=\"Add chose hotel name\" />\r\n    <MESSAGE value=\"Add child calculation\" />\r\n    <MESSAGE value=\"Add nights exception\" />\r\n    <MESSAGE value=\"Add Animal exception\" />\r\n    <MESSAGE value=\"Create reservation branch\" />\r\n    <MESSAGE value=\"Rename Guest classes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Rename Guest classes\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 88095c4bd4dd20f0843545b172c8ca5080ed95d3)
++++ b/.idea/workspace.xml	(date 1638651436514)
+@@ -1,6 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
++<<<<<<< HEAD
++    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Upd GuestApp">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/applications/GuestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/applications/GuestApp.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
++=======
+     <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Rename Guest classes">
+       <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/Hotel/controllers/ClientController.class" beforeDir="false" />
+@@ -8,6 +16,7 @@
+       <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/ClientView.class" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/applications/ReservationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/applications/ReservationApp.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
++>>>>>>> feature-reservation
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -28,7 +37,11 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
++<<<<<<< HEAD
++        <entry key="$PROJECT_DIR$" value="feature-reservation" />
++=======
+         <entry key="$PROJECT_DIR$" value="master" />
++>>>>>>> feature-reservation
+         <entry key="$PROJECT_DIR$" value="develop" />
+       </map>
+     </option>
+@@ -46,7 +59,11 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+   </component>
++<<<<<<< HEAD
++  <component name="RunManager" selected="Application.GuestApp">
++=======
+   <component name="RunManager" selected="Application.ReservationApp">
++>>>>>>> feature-reservation
+     <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
+       <module name="Hotel" />
+@@ -76,11 +93,19 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++<<<<<<< HEAD
++        <item itemvalue="Application.GuestApp" />
++        <item itemvalue="Application.Main" />
++        <item itemvalue="Application.ReservationApp" />
++        <item itemvalue="Application.GuestApp" />
++        <item itemvalue="Application.GuestApp" />
++=======
+         <item itemvalue="Application.ReservationApp" />
+         <item itemvalue="Application.GuestApp" />
+         <item itemvalue="Application.GuestApp" />
+         <item itemvalue="Application.Main" />
+         <item itemvalue="Application.Main" />
++>>>>>>> feature-reservation
+       </list>
+     </recent_temporary>
+   </component>
+@@ -156,7 +181,25 @@
+       <option name="project" value="LOCAL" />
+       <updated>1638649796889</updated>
+     </task>
++<<<<<<< HEAD
++    <task id="LOCAL-00010" summary="Upd Reservation">
++      <created>1638650688312</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1638650688312</updated>
++    </task>
++    <task id="LOCAL-00011" summary="Upd Reservation">
++      <created>1638650708078</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1638650708078</updated>
++    </task>
++    <option name="localTasksCounter" value="12" />
++=======
+     <option name="localTasksCounter" value="10" />
++>>>>>>> feature-reservation
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -193,6 +236,12 @@
+     <MESSAGE value="Add Animal exception" />
+     <MESSAGE value="Create reservation branch" />
+     <MESSAGE value="Rename Guest classes" />
++<<<<<<< HEAD
++    <MESSAGE value="Upd Reservation" />
++    <MESSAGE value="Upd GuestApp" />
++    <option name="LAST_COMMIT_MESSAGE" value="Upd GuestApp" />
++=======
+     <option name="LAST_COMMIT_MESSAGE" value="Rename Guest classes" />
++>>>>>>> feature-reservation
+   </component>
+ </project>
+\ No newline at end of file

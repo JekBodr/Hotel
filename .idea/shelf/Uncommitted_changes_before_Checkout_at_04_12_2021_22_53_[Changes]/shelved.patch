@@ -1,0 +1,25 @@
+Index: src/controllers/GuestController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controllers;\r\n\r\nimport Exeptions.WrongNightsQuantity;\r\nimport models.Guest;\r\nimport utils.Rounder;\r\nimport views.GuestView;\r\n\r\npublic class GuestController {\r\n    Guest model;\r\n    GuestView view;\r\n\r\n  //   Конструктор\r\n    public GuestController(Guest model, GuestView view) {\r\n        this.model = model;\r\n        this.view = view;\r\n    }\r\n\r\n    public void runApp() throws WrongNightsQuantity {\r\n\r\n        view.getInputs();\r\n\r\n        String name = model.getName();\r\n\r\n        double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());\r\n        double totalPrice = model.calculateStarsPrice(starsPrice, model.getGuestsAdultQuantity(),\r\n                model.getGuestsChildQuantity(),\r\n                model.getGuestsAnimalQuantity(),\r\n                model.getNightQuantity());\r\n        String paymentInitialRounded = Rounder.roundValue(totalPrice);\r\n        String hotelName = model.choseHotel(model.getStarsQuantity());\r\n\r\n\r\n       String output = \"------------------------------\\n\" +\r\n                \"Название отеля: \" + hotelName +\r\n                \"\\nКолличество ночей: \" + model.getNightQuantity() +\r\n                \"\\nСума к оплате (грн.): \" + paymentInitialRounded + \"\\n\";\r\n\r\n        view.getOutput(output);\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/controllers/GuestController.java b/src/controllers/GuestController.java
+--- a/src/controllers/GuestController.java	
++++ b/src/controllers/GuestController.java	
+@@ -1,6 +1,6 @@
+ package controllers;
+ 
+-import Exeptions.WrongNightsQuantity;
++
+ import models.Guest;
+ import utils.Rounder;
+ import views.GuestView;
+@@ -15,7 +15,7 @@
+         this.view = view;
+     }
+ 
+-    public void runApp() throws WrongNightsQuantity {
++    public void runApp()  {
+ 
+         view.getInputs();
+ 
