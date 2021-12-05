@@ -16,6 +16,8 @@ public class ReservationView {
         this.model = model;
     }
     public void getInputs(){
+
+
         try {
             System.out.print("Номер комнаты: ");
             int roomNumber = sc.nextInt();

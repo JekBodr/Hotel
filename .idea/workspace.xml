@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Rebase view, add controller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ReservationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ReservationView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +55,7 @@
       <recent name="exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ReservationApp">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
       <module name="Hotel" />
@@ -114,9 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReservationApp" />
-        <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ReservationApp" />
+        <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.GuestApp" />
       </list>
     </recent_temporary>

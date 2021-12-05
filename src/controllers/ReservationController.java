@@ -4,26 +4,16 @@ import models.Reservation;
 import views.ReservationView;
 
 public class ReservationController {
-
-    ReservationView view;
     Reservation model;
+    ReservationView view;
 
 
-    public ReservationController(ReservationView view, Reservation model) {
-        this.view = view;
+    public ReservationController(Reservation model, ReservationView view) {
         this.model = model;
+        this.view = view;
     }
 
     public void runApp(){
         view.getInputs();
-
-
-
-        //view.getOutput();
-
-
-
     }
-
-
 }
