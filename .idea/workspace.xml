@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Rebase Main">
-      <change afterPath="$PROJECT_DIR$/src/controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/applcations/ReservationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ReservationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Rebase view, add controller">
+      <change beforePath="$PROJECT_DIR$/src/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ReservationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ReservationView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638653202892</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Rebase view, add controller">
+      <created>1638737867493</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1638737867493</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +298,7 @@
     <MESSAGE value="Upd GuestApp" />
     <MESSAGE value="Add discount 30%" />
     <MESSAGE value="Add limit for 10 nights" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add limit for 10 nights" />
+    <MESSAGE value="Rebase view, add controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebase view, add controller" />
   </component>
 </project>
