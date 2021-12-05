@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add limit for 10 nights">
-      <change afterPath="$PROJECT_DIR$/src/applcations/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/DomainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Rebase Main">
+      <change afterPath="$PROJECT_DIR$/src/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applcations/ReservationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ReservationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ReservationApp" />
-        <item itemvalue="Application.GuestApp (1)" />
         <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GuestApp" />

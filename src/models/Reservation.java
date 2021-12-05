@@ -53,6 +53,4 @@ public class Reservation {
                 + duration()
                 + " ночей";
     }
-
-
 }
