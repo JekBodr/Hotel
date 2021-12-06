@@ -78,17 +78,22 @@ public class Guest implements StarsChose, TotalPrice, HotelName {
         return starsChose * clientsNumber * nightsNumber;
     }
 
+    // добавил скридку на ребенка в 50%
     @Override
     public double calculateStarsPrice(double starsChose, int clientsNumberAdult, int clientsNumberChild, int nightsNumber) {
-        return starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * nightsNumber;
+        return (starsChose * clientsNumberAdult) + (starsChose * clientsNumberChild * 0.5) * nightsNumber;
     }
 
+    // добавил плату за животного 120%, скидку 30%
     @Override
     public double calculateStarsPrice(double starsChose, int clientsNumberAdult,
                                       int clientsNumberChild, int clientsNumberAnimal, int nightsNumber) {
-        return (starsChose * clientsNumberAdult * (clientsNumberChild *0.7) * (clientsNumberAnimal *1.2) * nightsNumber) * 0.7;
+        return ((starsChose * clientsNumberAdult) + (starsChose * clientsNumberChild *0.5)
+                + (starsChose * clientsNumberAnimal *1.2) * nightsNumber) * 0.7;
 
     }
+
+    // Выбор отеля
     @Override
     public String choseHotel(int stars) {
         String name = null;

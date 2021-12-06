@@ -44,8 +44,6 @@ public class GuestView {
             throw new WrongNightsQuantity();
         }
 
-
-
         title = "Введите количество взрослых гостей: ";
         System.out.print(title);
         guestsAdult = Validator.validateQuantityInput(scanner);
@@ -61,13 +59,10 @@ public class GuestView {
         guestAnimal = Validator.validateQuantityInput(scanner);
         model.setGuestsAnimalQuantity(guestAnimal);
 
-
-
         title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);
         stars = Validator.validateQuantityInput(scanner);
         model.setStarsQuantity(stars);
-
 
         // Закрываем Scanner
         scanner.close();

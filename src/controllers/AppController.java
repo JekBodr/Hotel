@@ -12,14 +12,15 @@ public class AppController {
     public void runApp() throws WrongNightsQuantity, ParseException {
         System.out.println("""
                 Выберете режим работы программы
-                 1 - Рассчет стоимости для гостя
-                2 - Регистрация номера (для Клиента)""");
+                1 - Рассчет стоимости для гостя
+                2 - Бронирование номера (для Клиента)""");
         Scanner scanner = new Scanner(System.in);
         int  input = scanner.nextInt();
         if (input == 1)guest();
         if (input == 2)reservation();
     }
 
+    // реализует рассчет стоимости для гостя
     public void guest() throws WrongNightsQuantity {
         Guest model = new Guest();
         GuestView view = new GuestView(model);
@@ -27,6 +28,7 @@ public class AppController {
         controller.runApp();
     }
 
+    // реализует бронирования номера (для клиента)
     public void reservation() throws ParseException {
         Reservation model = new Reservation();
         ReservationView view = new ReservationView(model);

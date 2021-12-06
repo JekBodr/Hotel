@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Working appController">
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Working appController (clean &quot;death&quot; code).">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/HotelName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/HotelName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/TotalPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/TotalPrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/GuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GuestView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,17 +24,25 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="feature-reservation" />
+    <option name="BRANCH" value="feature-appController" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature-appController" />
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="21kYFvLRfdQaKisxhZl4ennA6VF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -101,8 +109,8 @@
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.GuestApp" />
-        <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ReservationApp" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638796957910</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Working appController (clean &quot;death&quot; code).">
+      <created>1638797478949</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1638797478949</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +264,7 @@
     <MESSAGE value="Upd GuestApp" />
     <MESSAGE value="Add discount 30%" />
     <MESSAGE value="Working appController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working appController" />
+    <MESSAGE value="Working appController (clean &quot;death&quot; code)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working appController (clean &quot;death&quot; code)." />
   </component>
 </project>
