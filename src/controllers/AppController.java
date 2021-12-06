@@ -1,15 +1,9 @@
 package controllers;
 import exceptions.WrongNightsQuantity;
-import controllers.GuestController;
 import models.Guest;
 import views.GuestView;
-import models.Guest;
-import views.GuestView;
-import controllers.ReservationController;
-import exceptions.DomainException;
 import models.Reservation;
 import views.ReservationView;
-
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -24,17 +18,12 @@ public class AppController {
         int  input = scanner.nextInt();
         if (input == 1)guest();
         if (input == 2)reservation();
-
     }
-
-
-
 
     public void guest() throws WrongNightsQuantity {
         Guest model = new Guest();
         GuestView view = new GuestView(model);
         GuestController controller = new GuestController(model, view);
-
         controller.runApp();
     }
 
@@ -42,7 +31,6 @@ public class AppController {
         Reservation model = new Reservation();
         ReservationView view = new ReservationView(model);
         ReservationController controller = new ReservationController(model,view);
-        // Запуск программы/приложения
         controller.runApp();
     }
 }

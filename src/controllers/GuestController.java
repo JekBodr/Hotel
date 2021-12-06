@@ -1,5 +1,4 @@
 package controllers;
-
 import exceptions.WrongNightsQuantity;
 import models.Guest;
 import utils.Rounder;
@@ -16,10 +15,7 @@ public class GuestController {
     }
 
     public void runApp() throws WrongNightsQuantity {
-
         view.getInputs();
-
-        String name = model.getName();
 
         double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());
         double totalPrice = model.calculateStarsPrice(starsPrice, model.getGuestsAdultQuantity(),
@@ -28,7 +24,6 @@ public class GuestController {
                 model.getNightQuantity());
         String paymentInitialRounded = Rounder.roundValue(totalPrice);
         String hotelName = model.choseHotel(model.getStarsQuantity());
-
 
        String output = "------------------------------\n" +
                 "Название отеля: " + hotelName +

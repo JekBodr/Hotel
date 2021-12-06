@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Working Reservation">
-      <change afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Working appController">
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/TotalPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/TotalPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Reservation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638652355436</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Working appController">
+      <created>1638796957910</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638796957910</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +248,7 @@
     <MESSAGE value="Upd Reservation" />
     <MESSAGE value="Upd GuestApp" />
     <MESSAGE value="Add discount 30%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add discount 30%" />
+    <MESSAGE value="Working appController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working appController" />
   </component>
 </project>

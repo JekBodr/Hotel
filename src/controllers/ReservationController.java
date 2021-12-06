@@ -7,7 +7,6 @@ public class ReservationController {
     Reservation model;
     ReservationView view;
 
-
     public ReservationController(Reservation model, ReservationView view) {
         this.model = model;
         this.view = view;
