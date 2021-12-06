@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Working appController (clean &quot;death&quot; code).">
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add comments, UPD calculation">
+      <change afterPath="$PROJECT_DIR$/src/exceptions/WrongDataInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/HotelName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/HotelName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/TotalPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/TotalPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/controllers/GuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/controllers/GuestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/models/Guest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/models/Guest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/utils/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/utils/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/GuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GuestView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +29,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="feature-appController" />
+    <option name="BRANCH" value="origin/develop" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature-appController" />
+        <entry key="$PROJECT_DIR$" value="develop" />
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
@@ -235,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638797478949</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add comments, UPD calculation">
+      <created>1638800807524</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1638800807524</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +255,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature-exceptions" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -265,6 +289,7 @@
     <MESSAGE value="Add discount 30%" />
     <MESSAGE value="Working appController" />
     <MESSAGE value="Working appController (clean &quot;death&quot; code)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working appController (clean &quot;death&quot; code)." />
+    <MESSAGE value="Add comments, UPD calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments, UPD calculation" />
   </component>
 </project>

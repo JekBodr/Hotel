@@ -1,17 +1,20 @@
 package utils;
 
+import exceptions.WrongDataInput;
+
 import java.util.Scanner;
 
 public class Validator {
     // Валидация ввода имени
-    public static String validateName(Scanner scanner) {
-        String str = scanner.nextLine().trim();
-        while (str.isEmpty()) {
-            System.out.print("Пусто! Введите имя клиента: ");
-            str = scanner.nextLine().trim();
+
+    public static String validateNameSymbols(Scanner scanner) throws WrongDataInput {
+        String str = scanner.nextLine();
+        if (str.matches("-?\\d+") ||str.isEmpty()) {
+            throw  new WrongDataInput("Введите имя на латинице или кириллице");
         }
         return str;
     }
+
 
     // Валидация ввода количества
     public static int validateQuantityInput(Scanner scanner) {

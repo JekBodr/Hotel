@@ -1,5 +1,6 @@
 package controllers;
 import exceptions.WrongNightsQuantity;
+import exceptions.WrongDataInput;
 import models.Guest;
 import utils.Rounder;
 import views.GuestView;
@@ -14,7 +15,7 @@ public class GuestController {
         this.view = view;
     }
 
-    public void runApp() throws WrongNightsQuantity {
+    public void runApp() throws WrongNightsQuantity, WrongDataInput {
         view.getInputs();
 
         double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());

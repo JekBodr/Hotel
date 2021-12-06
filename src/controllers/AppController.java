@@ -1,5 +1,6 @@
 package controllers;
 import exceptions.WrongNightsQuantity;
+import exceptions.WrongDataInput;
 import models.Guest;
 import views.GuestView;
 import models.Reservation;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 
 public class AppController {
 
-    public void runApp() throws WrongNightsQuantity, ParseException {
+    public void runApp() throws WrongNightsQuantity, ParseException, WrongDataInput {
         System.out.println("""
                 Выберете режим работы программы
                 1 - Рассчет стоимости для гостя
@@ -21,7 +22,7 @@ public class AppController {
     }
 
     // реализует рассчет стоимости для гостя
-    public void guest() throws WrongNightsQuantity {
+    public void guest() throws WrongNightsQuantity, WrongDataInput {
         Guest model = new Guest();
         GuestView view = new GuestView(model);
         GuestController controller = new GuestController(model, view);

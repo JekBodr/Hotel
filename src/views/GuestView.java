@@ -1,6 +1,7 @@
 package views;
 
 import exceptions.WrongNightsQuantity;
+import exceptions.WrongDataInput;
 import models.Guest;
 import utils.Validator;
 
@@ -23,7 +24,7 @@ public class GuestView {
     }
 
     // Ввод данных
-    public void getInputs() throws WrongNightsQuantity {
+    public void getInputs() throws WrongNightsQuantity, WrongDataInput {
 
         // Создаем экземпляр Scanner
         scanner = new Scanner(System.in);
@@ -32,13 +33,22 @@ public class GuestView {
 
         title = "Введите имя клиента: ";
         System.out.print(title);
-        name = Validator.validateName(scanner);
-        model.setName(name);
+
+        try {
+            name = Validator.validateNameSymbols(scanner);
+            model.setName(name);
+        }catch (WrongDataInput e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+
+        }
+
+
 
         title = "Введите количество  ночей: ";
         System.out.print(title);
         nights = Validator.validateQuantityInput(scanner);
-        if (nights < 10) model.setNightQuantity(nights);
+        if (nights < 11) model.setNightQuantity(nights);
         else {
             System.out.println("Не больше 10 ночей!!!!!");
             throw new WrongNightsQuantity();
@@ -67,7 +77,6 @@ public class GuestView {
         // Закрываем Scanner
         scanner.close();
     }
-
     // Вывод данных
     public void getOutput(String output) {
         System.out.println(output);
