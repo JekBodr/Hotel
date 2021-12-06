@@ -1,14 +1,16 @@
+import controllers.AppController;
 import exceptions.WrongNightsQuantity;
-import controllers.GuestController;
-import models.Guest;
-import views.GuestView;
+
+import java.text.ParseException;
 
 public class Main {
-    public static void main(String[] args) throws WrongNightsQuantity {
-            Guest model = new Guest();
-            GuestView view = new GuestView(model);
-            GuestController controller = new GuestController(model, view);
-            // Запуск программы/приложения
-            controller.runApp();
+    public static void main(String[] args) throws WrongNightsQuantity, ParseException {
+//            Guest model = new Guest();
+//            GuestView view = new GuestView(model);
+//            GuestController controller = new GuestController(model, view);
+//            // Запуск программы/приложения
+//            controller.runApp();
+        AppController appController = new AppController();
+        appController.runApp();
     }
 }

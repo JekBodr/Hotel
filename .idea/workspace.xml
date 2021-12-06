@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add discount 30%">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_02__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_57__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_57__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_12_2021_22_57__Changes_1.xml" afterDir="false" />
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Working Reservation">
+      <change afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/base/TotalPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/base/TotalPrice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/models/Guest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/models/Guest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exeptions/WrongNightsQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/WrongNightsQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/applcations/GuestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/applcations/GuestApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/GuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GuestView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +20,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="master" />
+    <option name="BRANCH" value="feature-reservation" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
@@ -53,30 +44,30 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.GuestApp (1)">
-    <configuration name="GuestApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="applcations.GuestApp" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
+      <module name="Hotel" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
+      <module name="Hotel" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hotel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="applcations.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
-      <module name="Hotel" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="applications.GuestApp" />
-      <module name="Hotel" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,11 +94,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GuestApp (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ReservationApp" />
+        <item itemvalue="Application.GuestApp" />
         <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GuestApp" />
-        <item itemvalue="Application.GuestApp" />
       </list>
     </recent_temporary>
   </component>
@@ -226,19 +217,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="develop" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
