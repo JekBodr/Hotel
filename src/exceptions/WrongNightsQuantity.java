@@ -2,10 +2,10 @@ package exceptions;
 
 public class WrongNightsQuantity extends Exception {
 
-        private String checkData;
+        private final String checkData;
 
-        public WrongNightsQuantity() {
-            checkData = "Максимальное количество ночей 10";
+        public WrongNightsQuantity(String s) {
+            checkData = s +"Максимальное количество ночей 10";
         }
 
         @Override

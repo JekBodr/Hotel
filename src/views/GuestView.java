@@ -24,34 +24,39 @@ public class GuestView {
     }
 
     // Ввод данных
-    public void getInputs() throws WrongNightsQuantity, WrongDataInput {
+    public void getInputs() throws WrongNightsQuantity {
 
         // Создаем экземпляр Scanner
         scanner = new Scanner(System.in);
 
         // Ввод и валидация данных
-
+        // доработал валидатор: выбьет исключение
+        // если введено пустая строка, или цифровое значение
         title = "Введите имя клиента: ";
         System.out.print(title);
 
         try {
             name = Validator.validateNameSymbols(scanner);
             model.setName(name);
-        }catch (WrongDataInput e){
+        } catch (WrongDataInput e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
 
         }
 
-
-
-        title = "Введите количество  ночей: ";
-        System.out.print(title);
-        nights = Validator.validateQuantityInput(scanner);
-        if (nights < 11) model.setNightQuantity(nights);
-        else {
-            System.out.println("Не больше 10 ночей!!!!!");
-            throw new WrongNightsQuantity();
+        // выбросит исключение если введено больше 10
+        try {
+            // Вызов метода
+            title = "Введите количество  ночей: ";
+            System.out.print(title);
+            nights = Validator.validateQuantityInput(scanner);
+            validateInputData(nights);
+            model.setNightQuantity(nights);
+        } catch (WrongNightsQuantity ex) {
+            System.out.println("Что-то пошло не так! ");
+            // Вывод сообщения из объекта настраиваемого исключения
+            System.out.println("Ошибка: " + ex);
+            throw new WrongNightsQuantity("Что-ты делаешь?");
         }
 
         title = "Введите количество взрослых гостей: ";
@@ -77,8 +82,19 @@ public class GuestView {
         // Закрываем Scanner
         scanner.close();
     }
+
     // Вывод данных
     public void getOutput(String output) {
         System.out.println(output);
+    }
+
+    static void validateInputData(int quota) throws WrongNightsQuantity {
+
+        if ( quota > 10) {
+            // Выброс объекта пользовательского исключения
+            throw new WrongNightsQuantity("допустимо выбрать от 1 до 10 ночей");
+        } else {
+            System.out.print("");
+        }
     }
 }

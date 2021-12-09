@@ -12,11 +12,10 @@ public class ReservationView {
     Scanner sc = new Scanner(System.in);
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    public ReservationView(Reservation model) throws ParseException {
+    public ReservationView(Reservation model)  {
         this.model = model;
     }
     public void getInputs(){
-
 
         try {
             System.out.print("Номер комнаты: ");
@@ -35,6 +34,7 @@ public class ReservationView {
             } catch (ParseException ex) {
                 ex.printStackTrace();
             }
+
 
             Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
             System.out.println("Бронирование: " + reservation);
@@ -55,11 +55,6 @@ public class ReservationView {
             System.out.println("Неожиданная ошибка");
         }
         sc.close();
-
-    }
-    // Вывод данных
-    public void getOutput(String output) {
-        System.out.println(output);
     }
 }
 

@@ -1,7 +1,7 @@
 package exceptions;
 
 public class WrongDataInput extends Exception {
-    private String checkData;
+    private final String checkData;
 
     public WrongDataInput() {
         checkData = "Ошибка ввода данных";

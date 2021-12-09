@@ -20,11 +20,11 @@ public class Validator {
         while (!scanner.hasNextInt()) {
             String str = scanner.nextLine().trim();
             System.out.printf("\"%s\" - не число!\n", str);
-            System.out.print("Введите количество!: ");
+            System.out.print("Введите числовое значение!: ");
         }
         int quantity = scanner.nextInt();
         while (quantity <= 0) {
-            System.out.println("Неверное значение! Введите количество: ");
+            System.out.println("Неверное значение! Введите число больше 1: ");
             while (!scanner.hasNextInt()) {
                 String str = scanner.next().trim();
                 System.out.printf("\"%s\" - не число!\n", str);
