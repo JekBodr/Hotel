@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class AppController {
 
+    //выбор функционала программы
     public void runApp() throws WrongNightsQuantity, ParseException, WrongDataInput {
         System.out.println("""
                 Выберете режим работы программы
