@@ -36,6 +36,7 @@ public class ReservationView {
             }
 
 
+            assert checkOut != null;
             Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
             System.out.println("Бронирование: " + reservation);
 

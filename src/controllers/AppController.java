@@ -55,7 +55,7 @@ public class AppController {
             // Выброс объекта пользовательского исключения
             throw new WrongDataInput("Выбирайте 1 или 2!");
         } else {
-            System.out.println("Cпасибо, продолжайте работу с программой.");
+            System.out.println("Продолжайте работу с программой.");
         }
     }
 }

@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add InputNumber nigts exc.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/controllers/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/models/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/utils/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/utils/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/ClientView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/GuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GuestView.java" afterDir="false" />
-    </list>
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add input method with zero" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,7 +265,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639055832051</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add input method with zero">
+      <created>1639057252020</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1639057252020</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add input method with zero">
+      <created>1639057419594</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1639057419594</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +315,7 @@
     <MESSAGE value="UPD comments" />
     <MESSAGE value="Add InputNumber exc." />
     <MESSAGE value="Add InputNumber nigts exc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add InputNumber nigts exc." />
+    <MESSAGE value="Add input method with zero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add input method with zero" />
   </component>
 </project>
