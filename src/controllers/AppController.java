@@ -5,6 +5,7 @@ import models.Guest;
 import views.GuestView;
 import models.Reservation;
 import views.ReservationView;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class AppController {
