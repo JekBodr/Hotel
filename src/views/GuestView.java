@@ -22,7 +22,7 @@ public class GuestView {
     }
 
     // Ввод данных
-    public void getInputs() throws WrongNightsQuantity {
+    public void getInputs() throws WrongNightsQuantity, WrongDataInput {
 
         // Создаем экземпляр Scanner
         scanner = new Scanner(System.in);
@@ -74,8 +74,11 @@ public class GuestView {
 
         title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);
-        stars = Validator.validateQuantityInputWithZero(scanner);
-        model.setStarsQuantity(stars);
+        stars = Validator.validateQuantityInput(scanner);
+        if(stars <= 5) model.setStarsQuantity(stars);
+        else {
+            throw new WrongDataInput("Максимальное колличестов звёзд 5");
+        }
 
         // Закрываем Scanner
         scanner.close();
@@ -94,5 +97,6 @@ public class GuestView {
         } else {
             System.out.print("");
         }
+
     }
 }

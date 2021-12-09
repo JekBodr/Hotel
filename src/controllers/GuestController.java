@@ -1,4 +1,5 @@
 package controllers;
+import exceptions.WrongDataInput;
 import exceptions.WrongNightsQuantity;
 import models.Guest;
 import utils.Rounder;
@@ -14,7 +15,7 @@ public class GuestController {
         this.view = view;
     }
 
-    public void runApp() throws WrongNightsQuantity {
+    public void runApp() throws WrongNightsQuantity, WrongDataInput {
         view.getInputs();
 
         double starsPrice = model.calculateStarsPrice(model.getStarsQuantity());
@@ -26,8 +27,8 @@ public class GuestController {
         String hotelName = model.choseHotel(model.getStarsQuantity());
 
        String output = "------------------------------\n" +
-                "Имя клиента" + model.getName()+
-                "Название отеля: " + hotelName +
+                "Имя клиента: " + model.getName()+
+                "\nНазвание отеля: " + hotelName +
                 "\nКолличество ночей: " + model.getNightQuantity() +
                 "\nСума к оплате (грн.): " + paymentInitialRounded + "\n";
 
