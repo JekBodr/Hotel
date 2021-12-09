@@ -44,6 +44,7 @@ public class GuestView {
 
         }
 
+
         // выбросит исключение если введено больше 10
         try {
             // Вызов метода
@@ -66,17 +67,17 @@ public class GuestView {
 
         title = "Введите количество несовершеннолетних гостей: ";
         System.out.print(title);
-        guestsChild = Validator.validateQuantityInput(scanner);
+        guestsChild = Validator.validateQuantityInputWithZero(scanner);
         model.setGuestsChildQuantity(guestsChild);
 
         title = "Введите количество животных: ";
         System.out.print(title);
-        guestAnimal = Validator.validateQuantityInput(scanner);
+        guestAnimal = Validator.validateQuantityInputWithZero(scanner);
         model.setGuestsAnimalQuantity(guestAnimal);
 
         title = "Введите количество звезд (от 1й до 5ти): ";
         System.out.print(title);
-        stars = Validator.validateQuantityInput(scanner);
+        stars = Validator.validateQuantityInputWithZero(scanner);
         model.setStarsQuantity(stars);
 
         // Закрываем Scanner

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add name exception">
+    <list default="true" id="e97f6a9e-1f57-40d6-a8d7-e11adf0178a3" name="Changes" comment="Add InputNumber nigts exc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/controllers/ClientController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/models/Client.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hotel/utils/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/utils/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/ClientView.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel/views/GuestView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/GuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GuestView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +27,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/develop" />
+    <option name="BRANCH" value="feature-exception" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature-exception" />
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
@@ -51,7 +57,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Libs/sqlite-jdbc-3.36.0.3.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="GuestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -106,8 +115,8 @@
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ReservationApp" />
         <item itemvalue="Application.GuestApp" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ReservationApp" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +255,28 @@
       <option name="project" value="LOCAL" />
       <updated>1638827610485</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="UPD name exception">
+      <created>1638829740630</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1638829740630</updated>
+    </task>
+    <task id="LOCAL-00020" summary="UPD comments">
+      <created>1639049850141</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1639049850141</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add InputNumber nigts exc.">
+      <created>1639055832051</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1639055832051</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,19 +284,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature-exceptions" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -290,6 +308,10 @@
     <MESSAGE value="Working appController (clean &quot;death&quot; code)." />
     <MESSAGE value="Add comments, UPD calculation" />
     <MESSAGE value="Add name exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add name exception" />
+    <MESSAGE value="UPD name exception" />
+    <MESSAGE value="UPD comments" />
+    <MESSAGE value="Add InputNumber exc." />
+    <MESSAGE value="Add InputNumber nigts exc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add InputNumber nigts exc." />
   </component>
 </project>

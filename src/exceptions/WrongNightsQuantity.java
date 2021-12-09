@@ -5,7 +5,7 @@ public class WrongNightsQuantity extends Exception {
         private final String checkData;
 
         public WrongNightsQuantity(String s) {
-            checkData = s +"Максимальное количество ночей 10";
+            checkData = s +" Максимальное количество ночей 10";
         }
 
         @Override
