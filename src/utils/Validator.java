@@ -1,7 +1,5 @@
 package utils;
-
 import exceptions.WrongDataInput;
-
 import java.util.Scanner;
 
 public class Validator {

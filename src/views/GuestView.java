@@ -1,10 +1,8 @@
 package views;
-
 import exceptions.WrongNightsQuantity;
 import exceptions.WrongDataInput;
 import models.Guest;
 import utils.Validator;
-
 import java.util.Scanner;
 
 public class GuestView {
@@ -43,7 +41,6 @@ public class GuestView {
             e.printStackTrace();
 
         }
-
 
         // выбросит исключение если введено больше 10
         try {

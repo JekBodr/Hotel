@@ -1,5 +1,4 @@
 package views;
-
 import exceptions.DomainException;
 import models.Reservation;
 import java.text.ParseException;
@@ -34,7 +33,6 @@ public class ReservationView {
             } catch (ParseException ex) {
                 ex.printStackTrace();
             }
-
 
             assert checkOut != null;
             Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
